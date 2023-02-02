@@ -1,6 +1,6 @@
 {
 	"data": {
-		"links": ["https://whaleyogurt.github.io", 
+		"links":["https://whaleyogurt.github.io", 
 			 "https://whaleyogurt.github.io/AdvancedHonorsBiologyNotes",
 			 "https://whaleyogurt.github.io/MaddieHatesSharks",
 			 "https://whaleyogurt.github.io/TestGameDownloads",
@@ -8,14 +8,14 @@
 			 "https://whaleyogurt.github.io/FreeRAM",
 			 "https://whaleyogurt.github.io/TestSite"],
 
-		"imageurls": ["https://whaleyogurt.github.io/Files/Images/4GB.png",
+		"imageurls":["https://whaleyogurt.github.io/Files/Images/4GB.png",
 			     "https://whaleyogurt.github.io/Files/Images/8GB.png",
 			     "https://whaleyogurt.github.io/Files/Fist Icon.bmp",
 			     "https://whaleyogurt.github.io/Files/Images/16GB.png",
-				 "https://whaleyogurt.github.io/Files/Images/2056GB.png",
+			     "https://whaleyogurt.github.io/Files/Images/2056GB.png",
 			     "https://whaleyogurt.github.io/Files/FREE RAM QR CODE.png"],
 
-		"files": ["https://whaleyogurt.github.io/Files/RawExeFiles/4GB.exe",
+		"files":["https://whaleyogurt.github.io/Files/RawExeFiles/4GB.exe",
 			 "https://whaleyogurt.github.io/Files/RawExeFiles/8GB.exe",
 			 "https://whaleyogurt.github.io/Files/RawExeFiles/16GB.exe",
 			 "https://whaleyogurt.github.io/Files/RawExeFiles/2056GB.exe",
@@ -28,7 +28,7 @@
 			 "https://whaleyogurt.github.io/Files/data.json",
 			 "https://whaleyogurt.github.io/Notes/Everything.zip"],
 
-		"notes": ["https://https://whaleyogurt.github.io/Notes/Ch 6.1 Notes.docx",
+		"notes":["https://https://whaleyogurt.github.io/Notes/Ch 6.1 Notes.docx",
 			"https://https://whaleyogurt.github.io/Notes/Ch 6.2 Notes.docx",
 			"https://https://whaleyogurt.github.io/Notes/Ch 6.3 Notes.docx",
 			"https://https://whaleyogurt.github.io/Notes/Ch 6.4 Notes.docx",
