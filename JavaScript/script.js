@@ -8,3 +8,12 @@ function Count(){
 	document.getElementById("count").innerHTML = "Count: "+counter; 
 }
 	
+function AHBN_Download(){
+	fetch("WhaleYogurt.github.io/API/AHBND_Stats.json")
+		.then(function(resp)) {
+		      return resp.json();
+		})
+		.then(function(data)) {
+		      console.log(data):
+		});
+}
