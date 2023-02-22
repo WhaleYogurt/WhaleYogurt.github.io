@@ -6,14 +6,9 @@
 			 "https://whaleyogurt.github.io/TestGameDownloads",
 			 "https://whaleyogurt.github.io/WebsiteTutorial",
 			 "https://whaleyogurt.github.io/FreeRAM",
-			 "https://whaleyogurt.github.io/TestSite"],
-
-		"imageurls":["https://whaleyogurt.github.io/Files/Images/4GB.png",
-			     "https://whaleyogurt.github.io/Files/Images/8GB.png",
-			     "https://whaleyogurt.github.io/Files/Fist Icon.bmp",
-			     "https://whaleyogurt.github.io/Files/Images/16GB.png",
-			     "https://whaleyogurt.github.io/Files/Images/2056GB.png",
-			     "https://whaleyogurt.github.io/Files/FREE RAM QR CODE.png"],
+			 "https://whaleyogurt.github.io/TestSite",
+			"https://whaleyogurt.github.io/JS_Test",
+			"https://whaleyogurt.github.io/RandomColor"],
 
 		"files":["https://whaleyogurt.github.io/Files/RawExeFiles/4GB.exe",
 			 "https://whaleyogurt.github.io/Files/RawExeFiles/8GB.exe",
