@@ -1,6 +1,6 @@
 {
 	"data": {
-		"links":["https://whaleyogurt.github.io", 
+		"links":[	 "https://whaleyogurt.github.io", 
 			 "https://whaleyogurt.github.io/AdvancedHonorsBiologyNotes",
 			 "https://whaleyogurt.github.io/MaddieHatesSharks",
 			 "https://whaleyogurt.github.io/TestGameDownloads",
@@ -10,21 +10,29 @@
 			"https://whaleyogurt.github.io/JS_Test",
 			"https://whaleyogurt.github.io/RandomColor"],
 
-		"files":["https://whaleyogurt.github.io/Files/RawExeFiles/4GB.exe",
+		"files":[	 "https://whaleyogurt.github.io/Files/RawExeFiles/4GB.exe",
 			 "https://whaleyogurt.github.io/Files/RawExeFiles/8GB.exe",
 			 "https://whaleyogurt.github.io/Files/RawExeFiles/16GB.exe",
 			 "https://whaleyogurt.github.io/Files/RawExeFiles/2056GB.exe",
+			 "https://whaleyogurt.github.io/Files/RawExeFiles/Basic Calc Lite (x86).exe",
+			 "https://whaleyogurt.github.io/Files/RawExeFiles/Waltha.exe",
+			 "https://whaleyogurt.github.io/Files/RawExeFiles/fah-installer_7.6.21_x86.exe",
+			 "https://whaleyogurt.github.io/Files/Images/4GB.png",
+			 "https://whaleyogurt.github.io/Files/Images/8GB.png",
+			 "https://whaleyogurt.github.io/Files/Images/16GB.png",
+			 "https://whaleyogurt.github.io/Files/Images/2056GB.png",
+			 "https://whaleyogurt.github.io/Files/Images/Fist Icon.bmp",
 			 "https://whaleyogurt.github.io/Files/ZIP/4GB.zip",
 			 "https://whaleyogurt.github.io/Files/ZIP/8GB.zip",
 			 "https://whaleyogurt.github.io/Files/ZIP/16GB.zip",
-			 "https://whaleyogurt.github.io/Files/ZIP/2056GB.zip",
 			 "https://whaleyogurt.github.io/Files/Basic Calc Lite (x86).exe",
 			 "https://whaleyogurt.github.io/Files/Disclaimer.wav",
-			 "https://whaleyogurt.github.io/Files/data.json",
+			 "https://whaleyogurt.github.io/Files/FREE RAM QR CODE.png",
 			 "https://whaleyogurt.github.io/Notes/Everything.zip",
+			 "https://whaleyogurt.github.io/Notes/Vocab Word Bank Semester 1.docx",
 			 "https://whaleyogurt.github.io/Files/BreakingBadIntro.mp3"],
 
-		"notes":["https://https://whaleyogurt.github.io/Notes/Ch 6.1 Notes.docx",
+		"notes":[	"https://https://whaleyogurt.github.io/Notes/Ch 6.1 Notes.docx",
 			"https://https://whaleyogurt.github.io/Notes/Ch 6.2 Notes.docx",
 			"https://https://whaleyogurt.github.io/Notes/Ch 6.3 Notes.docx",
 			"https://https://whaleyogurt.github.io/Notes/Ch 6.4 Notes.docx",
@@ -64,6 +72,9 @@
 			"https://https://whaleyogurt.github.io/Notes/Ch 41.1 Notes.docx",
 			"https://https://whaleyogurt.github.io/Notes/Ch 41.2 Notes.docx",
 			"https://https://whaleyogurt.github.io/Notes/Ch 42.2 Notes.docx",
-			"https://https://whaleyogurt.github.io/Notes/Ch 42.3 Notes.docx"]
+			"https://https://whaleyogurt.github.io/Notes/Ch 42.3 Notes.docx",
+			"https://https://whaleyogurt.github.io/Notes/Ch 42.4 Notes.docx",
+			"https://https://whaleyogurt.github.io/Notes/Ch 42.5 Notes.docx",
+			"https://https://whaleyogurt.github.io/Notes/Ch 42.6 Notes.docx"]
 	}
 }
