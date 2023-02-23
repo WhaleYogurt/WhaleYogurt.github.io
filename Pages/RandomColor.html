@@ -1,39 +1,41 @@
 <head>
-	<style>
-      body {
-        height: 100vh;
-        margin: 0;
-        padding: 1rem;
-        display: grid;
-        place-items: center;
-        font-family: system-ui;
-      }
-      h1 {
-        background: white;
-        padding: 1rem 2rem;
-        text-align: center;
-      }
-      span {
-        display: block;
-        padding: 1rem;
-        font-size: 1rem;
-        font-weight: normal;
-        font-family: monospace;
-      }
-  </style>
+<link rel="icon" type="image/x-icon" href="Files/Images/16GB.png">
+<title>Random Color</title>
+<style>
+  body {
+height: 100vh;
+margin: 0;
+padding: 1rem;
+display: grid;
+place-items: center;
+font-family: system-ui;
+  }
+  h1 {
+background: white;
+padding: 1rem 2rem;
+text-align: center;
+  }
+  span {
+display: block;
+padding: 1rem;
+font-size: 1rem;
+font-weight: normal;
+font-family: monospace;
+  }
+</style>
 </head>
 <body>
   <h1>
-    <button id="genNew">Generate New Random Color</button>
-    <span id="color"></span>
-    <script>
-    const setBg = () => {
-    const randomColor = Math.floor(Math.random()*16777215).toString(16);
-    document.body.style.backgroundColor = "#" + randomColor;
-    color.innerHTML = "#" + randomColor;
-    }
-    genNew.addEventListener("click", setBg);
-    setBg();
-    </script>
+<button id="genNew">Generate New Random Color</button>
+<span id="color"></span>
+<script>
+const setBg = () => {
+const randomColor = Math.floor(Math.random()*16777215).toString(16);
+document.body.style.backgroundColor = "#" + randomColor;
+color.innerHTML = "#" + randomColor;
+}
+genNew.addEventListener("click", setBg);
+setBg();
+</script>
   </h1>
 </body>
