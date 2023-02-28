@@ -6,5 +6,6 @@
 	],
 	"usernames" : { "UNI" : ["willy", "charl", "jeff"],
 			"V-01" : ["piero"],
-			"V-02" : []}
+			"V-02" : []},
+	"currentUpdate" : "0.2"
  }
