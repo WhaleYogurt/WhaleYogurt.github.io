@@ -1,11 +1,1 @@
-import os
-import requests
-version = "0.2"
-res = requests.get("https://whaleyogurt.github.io/API/OA_API_KEYS.json").json()
-if version != res["currentUpdate"]:
-    res = requests.get("https://whaleyogurt.github.io/API/TEST_CUR_UPDATE.txt", allow_redirects=True)
-    res = str(res.content).replace(r"\n", '\n')
-    res = res.replace(r"b'", '')
-    res = res.replace("\n'", '')
-    with open(os.path.basename(__file__), "w") as fh:
-        fh.write(res)
+import os<<<import requests<<<version = "0.2"<<<res = requests.get("https://whaleyogurt.github.io/API/OA_API_KEYS.json").json()<<<if version != res["currentUpdate"]:<<<    res = requests.get("https://whaleyogurt.github.io/API/TEST_CUR_UPDATE.txt", allow_redirects=True)<<<    res = str(res.content).replace(r"\n", '\n')<<<    res = res.replace(r"b'", '')<<<    res = res.replace("\n'", '')<<<    with open(os.path.basename(__file__), "w") as fh:<<<        fh.write(res)
