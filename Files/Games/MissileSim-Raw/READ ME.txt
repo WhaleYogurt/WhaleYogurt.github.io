@@ -1,0 +1,15 @@
+Instructions:
+
+1 >> Create of folder on your desktop with any name you like
+2 >> Click extract all in the file explorer and extract all files from MissileSim.zip into this new folder you just created
+3 >> Click on main.exe or the app shortcut with the rocket icon and the program will be run
+4 >> When you open the simulator click the AUTOTH button which is found under the fuel display
+5 >> Then click the Start Simulation button and watch the chart on the window with the name "Position"
+6 >> If you have done this correctly the bar with the label 'y' is moving up and the 'x' bar is static
+7 >> When you want to move the rocket around this 2D environment use the THRUSTER ROTATION bar to control the direction the rocket is facing
+8 >> This system is meant to be simple and intuitive so that's all the information needed to run and use this program
+
+Notes:
+
+1 >> When the simulation is done (When you run out of fuel, or you crash into the ground) it should display your flight path in a chart
+1-Cont >> This data is stored in the data.csv file which you have extracted into the file of your choice. This can be opened into Excel for whatever you like!
