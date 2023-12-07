@@ -1,49 +1,122 @@
+
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Main Page</title>
-		<link rel="icon" type="image/x-icon" href="Files/Images/16GB.png">
-		<link rel="stylesheet" href="Pages/CSS/style.css">
-	</head>
-	<body>
-		<center>
-			<h1>Welcome!</h1>
-		</center>
-		<center class = "cenBlack">
-			<hr>
-				<h3>Check out my other pages</h2>
-			<hr> 
-				<br>
-					<a href="Pages/AdvancedHonorsBiologyNotes">
-						<p class = "brGreen">My Bio Notes Download Page</p>
-					</a>
-				<br>
-					<a href="Pages/TestGameDownloads">
-						<p class = "brGreen">Download Some Game I Made</p>
-					</a>
-				<br>
-					<a href="Pages/WebsiteTutorial">
-						<p class = "brGreen">Learn How To Make A Really Bad Website Using This Really Bad Tutorial</p>
-					</a>
-				<br>
-					<a href="Pages/FreeRAM">
-						<p class = "brGreen">FREE RAM! (Please don't do anything stupid and actually run the .exe files)</p>
-					</a>
-				<br>
-				<a href="BetterSAM/index.html">
-					<p class = "brGreen">Just a clone of the BetterSAM Github repo that I refactored to fit the style of this site</p>
-				</a>
-				<br>
-				<a href="Pages/APCSP_Apps.html">
-					<p class = "brGreen">Just an archive of some projects I had to work on in a CS Course a while back</p>
-				</a>
-				<br>
-				<a href="Pages\SouthPark.html">
-					<p class = "brGreen">Just the first movie so far</p>
-				</a>
-				<br>
-			<hr>
-		</center>
-		<br>
-		<div class="topright"><a href="API/data.json">Psst....</a></div>
-	</body>
+<head>
+    <title>Main Page</title>
+    <link rel="icon" type="image/x-icon" href="Files/Images/16GB.png">
+    <link rel="stylesheet" href="Pages/CSS/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+            background: #555;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropdown:hover .dropbtn {background-color: #3e8e41;}
+    
+        .dropbtn {
+            background-color: #333; /* Customizing the button color to match the header */
+            color: white;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropbtn:hover {
+            background-color: #555; /* Slightly lighter shade for hover effect */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome!</h1>
+    </header>
+    <nav>
+        <a href="index.html">Main Page</a>
+        <a href="Pages/AdvancedHonorsBiologyNotes">My Bio Notes Download Page</a>
+        <a href="Pages/TestGameDownloads">Test Game Downloads</a>
+        
+    <div class="dropdown">
+        <button class="dropbtn">All Pages</button>
+        <div class="dropdown-content">
+            <a href="Pages/AdvancedHonorsBiologyNotes">My Bio Notes Download Page</a>
+<a href="Pages/TestGameDownloads">Games</a>
+<a href="Pages/WebsiteTutorial">Website Tutorial</a>
+<a href="Pages/FreeRAM">FREE RAM! (Joke)</a>
+<a href="BetterSAM/index.html">BetterSAM Clone</a>
+<a href="Pages/APCSP_Apps.html">AP CSP Project Archive</a>
+<a href="Pages\SouthPark.html">South Park Archive (WIP)</a>
+<a href="Pages\RandomColor.html">Random Color Genorator</a>
+        </div>
+    </div>
+    
+    </nav>
+    <div class="content">
+        <!-- Content goes here -->
+    </div>
+    <div class="footer">
+        <p>I can't afford copyright :(</p>
+    </div>
+</body>
 </html>
