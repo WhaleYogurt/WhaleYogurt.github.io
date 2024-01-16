@@ -1,139 +1,342 @@
+
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="icon" type="image/x-icon" href="Files/Images/16GB.png">
-		<title>AH Bio Notes</title>
-		<link rel="stylesheet" href="CSS/style.css">
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1179908084791983" crossorigin="anonymous"></script>
-	</head>
-	<body>
-		<hr>
-			<a href="https://whaleyogurt.github.io"><h4>&#8592;Main Page<h4/></a>
-		<hr>
-			<center> <h1> This Page Contains All Notes From Ch 5-23 </h1> </center>
-		<hr>
-			<center> <h2>Download EVERYTHING</h2> </center>
-			<center> <a href="/Notes/Everything.zip" download> <h2> &#8594;Click Here&#8592; </h2> </a> </center>
-		<hr>
-			<center> <h3> &#8595;Missing Notes&#8595; </h3> </center>
-		<hr>
+<head>
+    <link rel="icon" type="image/x-icon" href="Files/Images/16GB.png">
+    <title>AH Bio Notes</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .chapter-notes {
+            margin-top: 20px;
+        }
+        /* Additional styles will be similar to the main page */
+    </style>
+    
+<script>
+function showNotes(chapterId) {
+    var chapters = document.getElementsByClassName("chapter-notes");
+    for (var i = 0; i < chapters.length; i++) {
+        chapters[i].style.display = "none";
+    }
+    if (chapterId) {
+        document.getElementById(chapterId).style.display = "block";
+    }
+}
+</script>
+
+</head>
+<body>
+    <header>
+        <h1>Advanced Honors Biology Notes</h1>
+    </header>
+    <nav>
+        <!-- Dropdown navigation menu goes here -->
+    </nav>
+    <div class="content">
+        <h2>Select a Chapter to View Notes</h2>
+        <select id="chapterSelect" onchange="showNotes(this.value)"><option value="">Select a Chapter</option>
+			<option value="allChapters">Everything</h2></a></option>
+			<option value="chapter1">Ch 5.1-5.5</h2></a></option>
+			<option value="chapter2">Ch 6.1-6.7 </h2></option>
+			<option value="chapter3">Ch 7.1-7.5 </h2></option>
+			<option value="chapter4">Ch 9.4-9.5 </h2></option>
+			<option value="chapter5">Ch 10.1-10.2 </h2></option>
+			<option value="chapter6">Ch 12.1 </h2></option>
+			<option value="chapter7">Ch 13.2-13.4 </h2></option>
+			<option value="chapter8">Ch 14.1-14.4 </h2></option>
+			<option value="chapter9">Ch 17.1-17.4 </h2></option>
+			<option value="chapter10">Ch 22.1-22.3 </h2></option>
+			<option value="chapter11">Ch 23.1-23.4 </h2></option>
+			<option value="chapter12">Ch 41.1-41.3 </h2></option>
+			<option value="chapter13">Ch 42.2-42.6 </h2></option>
+			<option value="chapter14">Ch 43.1-43.3 </h2></option>
+		</select>
+		<div id="allChapters" class="chapter-notes" style="display:none;"></center>
 			<center> <h2> Ch 5.1-5.5 </h2> </center>
-		<hr>
-			<center>
-			<p>Ch 5.1 (Missing)</p>
-			<p>Ch 5.2 (Missing)</p>
-			<p>Ch 5.3 (Missing)</p>
-			<p>Ch 5.4 (Missing)</p>
-			<p>Ch 5.5 (Missing)</p>
 			<hr>
-			<h2> Ch 6.1-6.7 </h2>
+				<center>
+				<p>Ch 5.1 (Missing)</p>
+				<p>Ch 5.2 (Missing)</p>
+				<p>Ch 5.3 (Missing)</p>
+				<p>Ch 5.4 (Missing)</p>
+				<p>Ch 5.5 (Missing)</p>
+				<hr>
+				<h2> Ch 6.1-6.7 </h2>
+				<hr>
+				<a href="/Notes/Ch 6.1 Notes.docx" download> <p> Ch 6.1 Notes </p> </a>
+				<a href="/Notes/Ch 6.2 Notes.docx" download> <p> Ch 6.2 Notes </p> </a>
+				<a href="/Notes/Ch 6.3 Notes.docx" download> <p> Ch 6.3 Notes </p> </a>
+				<a href="/Notes/Ch 6.4 Notes.docx" download> <p> Ch 6.4 Notes </p> </a>
+				<a href="/Notes/Ch 6.5 Notes.docx" download> <p> Ch 6.5 Notes </p> </a>
+				<a href="/Notes/Ch 6.6 Notes.docx" download> <p> Ch 6.6 Notes </p> </a>
+				<a href="/Notes/Ch 6.7 Notes.docx" download> <p> Ch 6.7 Notes </p> </a>
+				</center>
 			<hr>
-			<a href="/Notes/Ch 6.1 Notes.docx" download> <p> Ch 6.1 Notes </p> </a>
-			<a href="/Notes/Ch 6.2 Notes.docx" download> <p> Ch 6.2 Notes </p> </a>
-			<a href="/Notes/Ch 6.3 Notes.docx" download> <p> Ch 6.3 Notes </p> </a>
-			<a href="/Notes/Ch 6.4 Notes.docx" download> <p> Ch 6.4 Notes </p> </a>
-			<a href="/Notes/Ch 6.5 Notes.docx" download> <p> Ch 6.5 Notes </p> </a>
-			<a href="/Notes/Ch 6.6 Notes.docx" download> <p> Ch 6.6 Notes </p> </a>
-			<a href="/Notes/Ch 6.7 Notes.docx" download> <p> Ch 6.7 Notes </p> </a>
-			</center>
-		<hr>
-			<center> <h2> Ch 7.1-7.5 </h2> </center>
-		<hr>
-			<center>
-			<a href="/Notes/Ch 7.1 and 7.2 Notes.docx" download> <p> Ch 7.1 and 7.2 Notes</p> </a>
-			<a href="/Notes/Ch 7.3 Notes.docx" download> <p> Ch 7.3 Notes </p> </a>
-			<a href="/Notes/Ch 7.4 Notes.docx" download> <p> Ch 7.4 Notes </p> </a>
-			<a href="/Notes/Ch 7.5 Notes.docx" download> <p> Ch 7.5 Notes </p> </a>
-			</center>
-		<hr>
-			<center> <h2> Ch 9.4-9.5 </h2> </center>
-		<hr>
-			<center>
-			<a href="/Notes/Ch 9.1 Notes.docx" download> <p> Ch 9.1 Notes</p> </a>
-			<a href="/Notes/Ch 9.2 Notes.docx" download> <p> Ch 9.2 Notes</p> </a>
-			<a href="/Notes/Ch 9.3 Notes.docx" download> <p> Ch 9.3 Notes</p> </a>
-			<a href="/Notes/Ch 9.4 Notes.docx" download> <p> Ch 9.4 Notes</p> </a>
-			<a href="/Notes/Ch 9.5 Notes.docx" download> <p> Ch 9.5 Notes </p> </a>
-			</center>
-		<hr>
-			<center> <h2> Ch 10.1-10.2 </h2> </center>
-		<hr>
-			<center>
-			<a href="/Notes/Ch 10.1 Notes.docx" download> <p> Ch 10.1 Notes</p> </a>
-			<a href="/Notes/Ch 10.2 Notes.docx" download> <p> Ch 10.2 Notes </p> </a>
-			<p>Ch 10.3 (Missing)</p>
-			</center>
-		<hr>
-			<center> <h2> Ch 12.1 </h2> </center>
-		<hr>
-			<center>
-			<a href="/Notes/Ch 12.1 Notes.docx" download> <p> Ch 12.1 Notes</p> </a>
-			<p>Ch 12.2 (Missing)</p>
-			<p>Ch 12.3 (Missing)</p>
-			</center>
-		<hr>
-			<center> <h2> Ch 13.2-13.4 </h2> </center>
-		<hr>
-			<center>
-			<a href="/Notes/Ch 13.1 Notes.docx" download> <p> Ch 13.1 Notes</p> </a>
-			<a href="/Notes/Ch 13.2 Notes.docx" download> <p> Ch 13.2 Notes</p> </a>
-			<a href="/Notes/Ch 13.3 Notes.zip" download> <p> Ch 13.3 Notes</p> </a>
-			<a href="/Notes/Ch 13.4 Notes.docx" download> <p> Ch 13.4 Notes</p> </a>
-			</center>
-		<hr>
-			<center> <h2> Ch 14.1-14.4 </h2> </center>
-		<hr>
-			<center>
-			<a href="/Notes/Ch 14.1 Notes.docx" download> <p> Ch 14.1 Notes</p> </a>
-			<a href="/Notes/Ch 14.3 Notes.docx" download> <p> Ch 14.3 Notes</p> </a>
-			<a href="/Notes/Ch 14.4 Notes.docx" download> <p> Ch 14.4 Notes</p> </a>
-			</center>
-		<hr>
-			<center> <h2> Ch 17.1-17.4 </h2> </center>
-		<hr>
-			<center>
-			<a href="/Notes/Ch 17.1 Notes.docx" download> <p> Ch 17.1 Notes</p> </a>
-			<a href="/Notes/Ch 17.2 Notes.docx" download> <p> Ch 17.2 Notes</p> </a>
-			<a href="/Notes/Ch 17.3 Notes.docx" download> <p> Ch 17.3 Notes</p> </a>
-			<a href="/Notes/Ch 17.4 Notes.docx" download> <p> Ch 17.4 Notes</p> </a>
-			</center>
-		<hr>
-			<center> <h2> Ch 22.1-22.3 </h2> </center>
-		<hr>
-			<center>
-			<a href="/Notes/Ch 22.1 Notes.docx" download> <p> Ch 22.1 Notes</p> </a>
-			<a href="/Notes/Ch 22.2 Notes.docx" download> <p> Ch 22.2 Notes</p> </a>
-			<a href="/Notes/Ch 22.3 Notes.docx" download> <p> Ch 22.3 Notes</p> </a>
-			</center>
-		<hr>
-			<center> <h2> Ch 23.1-23.4 </h2> </center>
-		<hr>
-			<center>
-			<a href="/Notes/Ch 23.1 Notes.docx" download> <p> Ch 23.1 Notes</p> </a>
-			<a href="/Notes/Ch 23.2 Notes.docx" download> <p> Ch 23.2 Notes</p> </a>
-			<a href="/Notes/Ch 23.3 Notes.docx" download> <p> Ch 23.3 Notes</p> </a>
-			<a href="/Notes/Ch 23.4 Notes.docx" download> <p> Ch 23.4 Notes</p> </a>
-			</center>
-		<hr>
-			<center> <h2> Ch 41.1-41.3 </h2> </center>
-		<hr>
-			<center>
-			<a href="/Notes/Ch 41.1 Notes.docx" download> <p> Ch 41.1 Notes</p> </a>
-			<a href="/Notes/Ch 41.2 Notes.docx" download> <p> Ch 41.2 Notes</p> </a>
-			<a href="/Notes/Ch 41.3 Notes.docx" download> <p> Ch 41.3 Notes</p> </a>
-			</center>
-		<hr>
-			<center> <h2> Ch 42.2-42.6 </h2> </center>
-		<hr>
-			<center>
-			<a href="/Notes/Ch 42.2 Notes.docx" download> <p> Ch 42.2 Notes</p> </a>
-			<a href="/Notes/Ch 42.3 Notes.docx" download> <p> Ch 42.3 Notes</p> </a>
-			<a href="/Notes/Ch 42.4 Notes.docx" download> <p> Ch 42.4 Notes</p> </a>
-			<a href="/Notes/Ch 42.5 Notes.docx" download> <p> Ch 42.5 Notes</p> </a>
-			<a href="/Notes/Ch 42.6 Notes.docx" download> <p> Ch 42.6 Notes</p> </a>
-			</center>
-		<hr>
-			<center> <h2> Ch 43.1-43.3 </h2> </center>
+				<center> <h2> Ch 7.1-7.5 </h2> </center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 7.1 and 7.2 Notes.docx" download> <p> Ch 7.1 and 7.2 Notes</p> </a>
+				<a href="/Notes/Ch 7.3 Notes.docx" download> <p> Ch 7.3 Notes </p> </a>
+				<a href="/Notes/Ch 7.4 Notes.docx" download> <p> Ch 7.4 Notes </p> </a>
+				<a href="/Notes/Ch 7.5 Notes.docx" download> <p> Ch 7.5 Notes </p> </a>
+				</center>
+			<hr>
+				<center> <h2> Ch 9.4-9.5 </h2> </center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 9.1 Notes.docx" download> <p> Ch 9.1 Notes</p> </a>
+				<a href="/Notes/Ch 9.2 Notes.docx" download> <p> Ch 9.2 Notes</p> </a>
+				<a href="/Notes/Ch 9.3 Notes.docx" download> <p> Ch 9.3 Notes</p> </a>
+				<a href="/Notes/Ch 9.4 Notes.docx" download> <p> Ch 9.4 Notes</p> </a>
+				<a href="/Notes/Ch 9.5 Notes.docx" download> <p> Ch 9.5 Notes </p> </a>
+				</center>
+			<hr>
+				<center> <h2> Ch 10.1-10.2 </h2> </center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 10.1 Notes.docx" download> <p> Ch 10.1 Notes</p> </a>
+				<a href="/Notes/Ch 10.2 Notes.docx" download> <p> Ch 10.2 Notes </p> </a>
+				<p>Ch 10.3 (Missing)</p>
+				</center>
+			<hr>
+				<center> <h2> Ch 12.1 </h2> </center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 12.1 Notes.docx" download> <p> Ch 12.1 Notes</p> </a>
+				<p>Ch 12.2 (Missing)</p>
+				<p>Ch 12.3 (Missing)</p>
+				</center>
+			<hr>
+				<center> <h2> Ch 13.2-13.4 </h2> </center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 13.1 Notes.docx" download> <p> Ch 13.1 Notes</p> </a>
+				<a href="/Notes/Ch 13.2 Notes.docx" download> <p> Ch 13.2 Notes</p> </a>
+				<a href="/Notes/Ch 13.3 Notes.zip" download> <p> Ch 13.3 Notes</p> </a>
+				<a href="/Notes/Ch 13.4 Notes.docx" download> <p> Ch 13.4 Notes</p> </a>
+				</center>
+			<hr>
+				<center> <h2> Ch 14.1-14.4 </h2> </center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 14.1 Notes.docx" download> <p> Ch 14.1 Notes</p> </a>
+				<a href="/Notes/Ch 14.3 Notes.docx" download> <p> Ch 14.3 Notes</p> </a>
+				<a href="/Notes/Ch 14.4 Notes.docx" download> <p> Ch 14.4 Notes</p> </a>
+				</center>
+			<hr>
+				<center> <h2> Ch 17.1-17.4 </h2> </center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 17.1 Notes.docx" download> <p> Ch 17.1 Notes</p> </a>
+				<a href="/Notes/Ch 17.2 Notes.docx" download> <p> Ch 17.2 Notes</p> </a>
+				<a href="/Notes/Ch 17.3 Notes.docx" download> <p> Ch 17.3 Notes</p> </a>
+				<a href="/Notes/Ch 17.4 Notes.docx" download> <p> Ch 17.4 Notes</p> </a>
+				</center>
+			<hr>
+				<center> <h2> Ch 22.1-22.3 </h2> </center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 22.1 Notes.docx" download> <p> Ch 22.1 Notes</p> </a>
+				<a href="/Notes/Ch 22.2 Notes.docx" download> <p> Ch 22.2 Notes</p> </a>
+				<a href="/Notes/Ch 22.3 Notes.docx" download> <p> Ch 22.3 Notes</p> </a>
+				</center>
+			<hr>
+				<center> <h2> Ch 23.1-23.4 </h2> </center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 23.1 Notes.docx" download> <p> Ch 23.1 Notes</p> </a>
+				<a href="/Notes/Ch 23.2 Notes.docx" download> <p> Ch 23.2 Notes</p> </a>
+				<a href="/Notes/Ch 23.3 Notes.docx" download> <p> Ch 23.3 Notes</p> </a>
+				<a href="/Notes/Ch 23.4 Notes.docx" download> <p> Ch 23.4 Notes</p> </a>
+				</center>
+			<hr>
+				<center> <h2> Ch 41.1-41.3 </h2> </center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 41.1 Notes.docx" download> <p> Ch 41.1 Notes</p> </a>
+				<a href="/Notes/Ch 41.2 Notes.docx" download> <p> Ch 41.2 Notes</p> </a>
+				<a href="/Notes/Ch 41.3 Notes.docx" download> <p> Ch 41.3 Notes</p> </a>
+				</center>
+			<hr>
+				<center> <h2> Ch 42.2-42.6 </h2> </center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 42.2 Notes.docx" download> <p> Ch 42.2 Notes</p> </a>
+				<a href="/Notes/Ch 42.3 Notes.docx" download> <p> Ch 42.3 Notes</p> </a>
+				<a href="/Notes/Ch 42.4 Notes.docx" download> <p> Ch 42.4 Notes</p> </a>
+				<a href="/Notes/Ch 42.5 Notes.docx" download> <p> Ch 42.5 Notes</p> </a>
+				<a href="/Notes/Ch 42.6 Notes.docx" download> <p> Ch 42.6 Notes</p> </a>
+				</center>
+			<hr>
+				<center> <h2> Ch 43.1-43.3 </h2> </center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 43.1 Notes.docx" download> <p> Ch 43.1 Notes</p> </a>
+				<a href="/Notes/Ch 43.2 Notes.docx" download> <p> Ch 43.2 Notes</p> </a>
+				<a href="/Notes/Ch 43.3 Notes.docx" download> <p> Ch 43.3 Notes</p> </a>
+				</center>
+			<hr>
+			<br>
+			<br>
+			<br>
+		</div>
+        <div id="chapter1" class="chapter-notes" style="display:none;"></center>
+			<hr>
+				<center>
+					<p>Ch 5.1 (Missing)</p>
+					<p>Ch 5.2 (Missing)</p>
+					<p>Ch 5.3 (Missing)</p>
+					<p>Ch 5.4 (Missing)</p>
+					<p>Ch 5.5 (Missing)</p>
+				</center>
+			<hr>
+		</div>
+		<div id="chapter2" class="chapter-notes" style="display:none;"></center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 6.1 Notes.docx" download> <p> Ch 6.1 Notes </p> </a>
+				<a href="/Notes/Ch 6.2 Notes.docx" download> <p> Ch 6.2 Notes </p> </a>
+				<a href="/Notes/Ch 6.3 Notes.docx" download> <p> Ch 6.3 Notes </p> </a>
+				<a href="/Notes/Ch 6.4 Notes.docx" download> <p> Ch 6.4 Notes </p> </a>
+				<a href="/Notes/Ch 6.5 Notes.docx" download> <p> Ch 6.5 Notes </p> </a>
+				<a href="/Notes/Ch 6.6 Notes.docx" download> <p> Ch 6.6 Notes </p> </a>
+				<a href="/Notes/Ch 6.7 Notes.docx" download> <p> Ch 6.7 Notes </p> </a>
+				</center>
+			<hr>
+		</div>
+		<div id="chapter3" class="chapter-notes" style="display:none;"></center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 7.1 and 7.2 Notes.docx" download> <p> Ch 7.1 and 7.2 Notes</p> </a>
+				<a href="/Notes/Ch 7.3 Notes.docx" download> <p> Ch 7.3 Notes </p> </a>
+				<a href="/Notes/Ch 7.4 Notes.docx" download> <p> Ch 7.4 Notes </p> </a>
+				<a href="/Notes/Ch 7.5 Notes.docx" download> <p> Ch 7.5 Notes </p> </a>
+				</center>
+			<hr>
+		</div>
+		<div id="chapter4" class="chapter-notes" style="display:none;"></center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 9.1 Notes.docx" download> <p> Ch 9.1 Notes</p> </a>
+				<a href="/Notes/Ch 9.2 Notes.docx" download> <p> Ch 9.2 Notes</p> </a>
+				<a href="/Notes/Ch 9.3 Notes.docx" download> <p> Ch 9.3 Notes</p> </a>
+				<a href="/Notes/Ch 9.4 Notes.docx" download> <p> Ch 9.4 Notes</p> </a>
+				<a href="/Notes/Ch 9.5 Notes.docx" download> <p> Ch 9.5 Notes </p> </a>
+				</center>
+			<hr>
+		</div>
+		<div id="chapter5" class="chapter-notes" style="display:none;"></center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 10.1 Notes.docx" download> <p> Ch 10.1 Notes</p> </a>
+				<a href="/Notes/Ch 10.2 Notes.docx" download> <p> Ch 10.2 Notes </p> </a>
+				<p>Ch 10.3 (Missing)</p>
+				</center>
+			<hr>
+		</div>
+		<div id="chapter6" class="chapter-notes" style="display:none;"></center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 12.1 Notes.docx" download> <p> Ch 12.1 Notes</p> </a>
+				<p>Ch 12.2 (Missing)</p>
+				<p>Ch 12.3 (Missing)</p>
+				</center>
+			<hr>
+		</div>
+		<div id="chapter7" class="chapter-notes" style="display:none;"></center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 13.1 Notes.docx" download> <p> Ch 13.1 Notes</p> </a>
+				<a href="/Notes/Ch 13.2 Notes.docx" download> <p> Ch 13.2 Notes</p> </a>
+				<a href="/Notes/Ch 13.3 Notes.zip" download> <p> Ch 13.3 Notes</p> </a>
+				<a href="/Notes/Ch 13.4 Notes.docx" download> <p> Ch 13.4 Notes</p> </a>
+				</center>
+			<hr>
+		</div>
+		<div id="chapter8" class="chapter-notes" style="display:none;"></center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 14.1 Notes.docx" download> <p> Ch 14.1 Notes</p> </a>
+				<a href="/Notes/Ch 14.3 Notes.docx" download> <p> Ch 14.3 Notes</p> </a>
+				<a href="/Notes/Ch 14.4 Notes.docx" download> <p> Ch 14.4 Notes</p> </a>
+				</center>
+			<hr>
+		</div>
+		<div id="chapter9" class="chapter-notes" style="display:none;"></center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 17.1 Notes.docx" download> <p> Ch 17.1 Notes</p> </a>
+				<a href="/Notes/Ch 17.2 Notes.docx" download> <p> Ch 17.2 Notes</p> </a>
+				<a href="/Notes/Ch 17.3 Notes.docx" download> <p> Ch 17.3 Notes</p> </a>
+				<a href="/Notes/Ch 17.4 Notes.docx" download> <p> Ch 17.4 Notes</p> </a>
+				</center>
+			<hr>
+		</div>
+		<div id="chapter10" class="chapter-notes" style="display:none;"></center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 22.1 Notes.docx" download> <p> Ch 22.1 Notes</p> </a>
+				<a href="/Notes/Ch 22.2 Notes.docx" download> <p> Ch 22.2 Notes</p> </a>
+				<a href="/Notes/Ch 22.3 Notes.docx" download> <p> Ch 22.3 Notes</p> </a>
+				</center>
+			<hr>
+		</div>
+		<div id="chapter11" class="chapter-notes" style="display:none;"></center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 23.1 Notes.docx" download> <p> Ch 23.1 Notes</p> </a>
+				<a href="/Notes/Ch 23.2 Notes.docx" download> <p> Ch 23.2 Notes</p> </a>
+				<a href="/Notes/Ch 23.3 Notes.docx" download> <p> Ch 23.3 Notes</p> </a>
+				<a href="/Notes/Ch 23.4 Notes.docx" download> <p> Ch 23.4 Notes</p> </a>
+				</center>
+			<hr>
+		</div>
+		<div id="chapter12" class="chapter-notes" style="display:none;"></center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 41.1 Notes.docx" download> <p> Ch 41.1 Notes</p> </a>
+				<a href="/Notes/Ch 41.2 Notes.docx" download> <p> Ch 41.2 Notes</p> </a>
+				<a href="/Notes/Ch 41.3 Notes.docx" download> <p> Ch 41.3 Notes</p> </a>
+				</center>
+			<hr>
+		</div>
+		<div id="chapter13" class="chapter-notes" style="display:none;"></center>
+			<hr>
+				<center>
+				<a href="/Notes/Ch 42.2 Notes.docx" download> <p> Ch 42.2 Notes</p> </a>
+				<a href="/Notes/Ch 42.3 Notes.docx" download> <p> Ch 42.3 Notes</p> </a>
+				<a href="/Notes/Ch 42.4 Notes.docx" download> <p> Ch 42.4 Notes</p> </a>
+				<a href="/Notes/Ch 42.5 Notes.docx" download> <p> Ch 42.5 Notes</p> </a>
+				<a href="/Notes/Ch 42.6 Notes.docx" download> <p> Ch 42.6 Notes</p> </a>
+				</center>
+			<hr>
+		</div>
+		<div id="chapter14" class="chapter-notes" style="display:none;"></center>
 		<hr>
 			<center>
 			<a href="/Notes/Ch 43.1 Notes.docx" download> <p> Ch 43.1 Notes</p> </a>
@@ -141,17 +344,12 @@
 			<a href="/Notes/Ch 43.3 Notes.docx" download> <p> Ch 43.3 Notes</p> </a>
 			</center>
 		<hr>
-			<p>I Can't AffordCopyright :(</p>
-		<hr>
-			<center> <a href="https://whaleyogurt.github.io/Pages/AHBioNotes.html" download> <p> Check Out The Source Code! </p> </a> </center>
-		<hr>
-			<p>Check Out My Other Websites!</p>
-			<a href="https://whaleyogurt.github.io/Pages/WebsiteTutorial">
-				<p>A Really Bad Tutorial On How To Make A Website</p>
-			</a>
-			<a href="https://whaleyogurt.github.io/Pages/MaddieHatesSharks">
-				<p>A Website Making Fun Of My Sisters Fear Of Jaws</p>
-			</a>
-			<center><h1>Thanks For Scrolling!</h1></center>
+		</div>
 	</body>
+</html></div>
+    </div>
+    <div class="footer">
+        <p>I can't afford copyright :(</p>
+    </div>
+</body>
 </html>
