@@ -45,11 +45,11 @@ code{
     }
 /* General style for the video tag */
 video {
-    width: auto;        /* Responsive width */
-    height: auto;       /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners */
+    width: auto;             /* Responsive width */
+    height: auto;            /* Maintain aspect ratio */
+    border: 10px solid #FFFFFF;  /* Thicker border with dark color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    outline: none;      /* Remove default focus outline */
+    outline: none;           /* Remove default focus outline */
 }
 
 /* Custom controls (if you are implementing them) */
@@ -105,4 +105,5 @@ video {
 video:hover .tooltip {
     opacity: 1;
 }
+
 
