@@ -23,21 +23,115 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>BetterSAM: Software Automatic Mouth</title>
-        <link rel="stylesheet" href="CSS/style.css">
         <style>
-                body {max-width:12cm;
+                body {
                       margin:0 auto;
                       font-family: sans-serif;
                     }
+                div {
+                    max-width:12cm;
+                }
                 h1, h2 {text-align:center}
                 label, input {display:flex;
                               flex-direction:column;
                               width:100%;}
                 label {width:30%}
-                button {width:60%}
                 button[id=fmm] {width:100%}
                 button[id=fmm2] {width:100%}
         </style>
+        <style>
+			.btn {
+  				background-color: DodgerBlue;
+  				border: none;
+  				color: white;
+  				padding: 12px 30px;
+  				cursor: pointer;
+  				font-size: 20px;
+			}
+			.btn:hover {
+			  	background-color: RoyalBlue;
+			}
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				background-color: #f4f4f4;
+			}
+			header {
+				background: #333;
+				color: #fff;
+				padding: 10px 0;
+				text-align: center;
+			}
+			nav {
+				display: flex;
+				justify-content: center;
+				background: #444;
+				padding: 10px 0;
+			}
+			nav a {
+				color: white;
+				text-decoration: none;
+				padding: 10px;
+			}
+			nav a:hover {
+				background: #555;
+			}
+			.content {
+				padding: 20px;
+				text-align: center;
+			}
+			.footer {
+				background: #333;
+				color: white;
+				text-align: center;
+				padding: 10px 0;
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+			}
+		
+			.dropdown {
+				position: relative;
+				display: inline-block;
+			}
+
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+			}
+
+			.dropdown-content a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+			}
+
+			.dropdown-content a:hover {background-color: #f1f1f1;}
+
+			.dropdown:hover .dropdown-content {display: block;}
+
+			.dropdown:hover .dropbtn {background-color: #3e8e41;}
+		
+			.dropbtn {
+				background-color: #333; /* Customizing the button color to match the header */
+				color: white;
+				padding: 10px 15px;
+				font-size: 16px;
+				border: none;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+
+			.dropbtn:hover {
+				background-color: #555; /* Slightly lighter shade for hover effect */
+			}
+		</style>
     </head>
     <body>
         <header>
@@ -61,7 +155,8 @@
 				</div>
 			</div>
 		</nav>
-        <h2></h2>
+        <center>
+            <h2></h2>
         <p></p>
         <script src="dist/samjs.js"></script>
         <script>
@@ -96,8 +191,8 @@
             <input type="range" id="mouth" min="0" max="255" value="0"/>
             <label id="throat-lbl" for="throat">Throat: </label>
             <input type="range" id="throat" min="0" max="255" value="0"/>
-            <button id="fmm2" type="submit">Preview</button>
-            <button id="fmm" type="submit">Download</button>
+            <button id="fmm2" type="submit" width=60%>Preview</button>
+            <button id="fmm" type="submit" width=60%>Download</button>
         </div>
             <hr>
         </div>
@@ -105,8 +200,6 @@
             GitHub Code.
         </a>
         <p style="text-align: center;">-More features soon-</p>
-        <div class="footer">
-			<p>I can't afford copyright :(</p>
-		</div>
+        </center>
     </body>
 </html>
