@@ -21,13 +21,13 @@ code{
       min-width: 400px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
      }
-    .styled-table thead tr {
+.styled-table thead tr {
       background-color: #009879;
       color: #ffffff;
       text-align: left;
     }
-    .styled-table th,
-    .styled-table td {
+.styled-table th,
+.styled-table td {
       padding: 12px 15px;
     }
     .styled-table tbody tr {
@@ -43,3 +43,66 @@ code{
       font-weight: bold;
       color: #009879;
     }
+/* General style for the video tag */
+video {
+    width: auto;        /* Responsive width */
+    height: auto;       /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    outline: none;      /* Remove default focus outline */
+}
+
+/* Custom controls (if you are implementing them) */
+.custom-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.custom-controls button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Style for play, pause buttons, etc. */
+.play-button, .pause-button, .mute-button {
+    /* Add specific styles for buttons */
+}
+
+/* Progress bar styles */
+.progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.progress-bar-filled {
+    width: 0;
+    height: 100%;
+    background-color: #007bff;
+}
+
+/* Tooltip styles for showing time, etc. */
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Hover effects */
+video:hover .tooltip {
+    opacity: 1;
+}
+
