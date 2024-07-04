@@ -1,45 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Download Counter Example</title>
-    <!-- Hotjar Tracking Code for https://whaleyogurt.github.io/ -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:3782294,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Goofballs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .banner {
+            background-color: #4b0082; /* Dark purple */
+            color: #32cd32; /* Lime green */
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .menu-bar {
+            background-color: #4b0082; /* Dark purple */
+            overflow: hidden;
+        }
+        .menu-bar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .menu-bar a:hover {
+            background-color: #32cd32; /* Lime green */
+            color: #4b0082; /* Dark purple */
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .comic {
+            margin: 20px 0;
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #32cd32; /* Lime green */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Test</h1>
-    </header>
-    <nav>
-        <a href="https://whaleyogurt.github.io">Main Page</a>
-        <a href="https://whaleyogurt.github.io/Pages/AdvancedHonorsBiologyNotes">My Bio Notes Download Page</a>
-        <a href="https://whaleyogurt.github.io/Pages/TestGameDownloads">Game Downloads</a>
-        <div class="dropdown">
-            <button class="dropbtn">All Pages</button>
-            <div class="dropdown-content">
-                <a href="https://whaleyogurt.github.io/Pages/WebsiteTutorial">Website Tutorial</a>
-                <a href="https://whaleyogurt.github.io/Pages/FreeRAM">FREE RAM! (Joke)</a>
-                <a href="https://whaleyogurt.github.io/BetterSAM/index.html">BetterSAM Clone</a>
-                <a href="https://whaleyogurt.github.io/Pages/APCSP_Apps.html">AP CSP Project Archive</a>
-                <a href="https://whaleyogurt.github.io/Pages/VideoArchive.html">Video Archive (WIP)</a>
-                <a href="https://whaleyogurt.github.io/Pages/RandomColor.html">Random Color Generator</a>
-            </div>
-        </div>
-    </nav>
-    <h1>Welcome to My Page</h1>
-    <p>Click below to download the file:</p>
-    <!-- Download Link with Bitly Shortened URL -->
-    <a href="https://bit.ly/3RbiA86" target="_blank">Download File</a>
-    <div class="footer">
-        <p>I can't afford copyright :(</p>
+
+    <div class="banner">
+        Galactic Goofballs
     </div>
+
+    <div class="menu-bar">
+        <a href="#home">Home</a>
+        <a href="#comics">Comics</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="content">
+        <div class="comic">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula aliquet purus, eu tincidunt mi ullamcorper vel.</p>
+        </div>
+    </div>
+
 </body>
 </html>
