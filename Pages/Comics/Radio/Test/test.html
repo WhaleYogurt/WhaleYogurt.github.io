@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Waveform Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        #controls {
+            margin-bottom: 20px;
+        }
+
+        #waveform {
+            width: 600px;
+            height: 200px;
+            background-color: #ddd;
+        }
+
+        #playButton {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #playButton.off {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <button id="playButton" class="off">Play</button>
+    </div>
+    <canvas id="waveform"></canvas>
+    <audio id="audio" src="test_audio.mp3" crossOrigin="anonymous"></audio>
+    <script src="test.js"></script>
+</body>
+</html>
