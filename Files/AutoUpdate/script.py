@@ -3,14 +3,14 @@ import sys
 import requests
 
 # URL of the version file hosted on GitHub Pages
-VERSION_URL = "https://<your-github-username>.github.io/version.txt"
+VERSION_URL = "https://whaleyogurt.github.io/Files/AutoUpdate/version.txt"
 # URL of the updated Python script hosted on GitHub Pages
-SCRIPT_URL = "https://<your-github-username>.github.io/script.py"
+SCRIPT_URL = "https://whaleyogurt.github.io/Files/AutoUpdate/script.py"
 # Path to the current script file
 CURRENT_SCRIPT = os.path.abspath(__file__)
 
 # Current version of the local script
-CURRENT_VERSION = "1.0.1"  # This is now version 1.0.1
+CURRENT_VERSION = "1.0.2"  # This is now version 1.0.2
 
 # Check if the script was run with 'debug' argument
 DEBUG = "debug" in sys.argv
@@ -67,6 +67,13 @@ def restart_script():
     os.execv(sys.executable, ['python'] + sys.argv)
 
 
+def main():
+    """Main function to be run after the script is up-to-date."""
+    print("Running the main function...")
+    # Add your main program logic here.
+    # This function will only be executed if the script is confirmed up-to-date.
+
+
 if __name__ == "__main__":
     # Step 1: Check if there is a new version
     update_available, remote_version = check_for_updates()
@@ -78,3 +85,5 @@ if __name__ == "__main__":
             restart_script()
     else:
         log_debug("No updates found. Running the current version.")
+        # Step 4: Run the main function after confirming it's up-to-date
+        main()
