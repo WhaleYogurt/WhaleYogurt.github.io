@@ -1,6 +1,8 @@
 import os
 import sys
 import requests
+import time
+import threading
 
 # URL of the version file hosted on GitHub Pages
 VERSION_URL = "https://whaleyogurt.github.io/Files/AutoUpdate/version.txt"
@@ -10,7 +12,7 @@ SCRIPT_URL = "https://whaleyogurt.github.io/Files/AutoUpdate/script.py"
 CURRENT_SCRIPT = os.path.abspath(__file__)
 
 # Current version of the local script
-CURRENT_VERSION = "1.0.3"  # This is now version 1.0.2
+CURRENT_VERSION = "1.0.4"  # This is now version 1.0.4
 
 # Discord Webhook URL (replace with your actual webhook URL)
 DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1290401874415058976/5Cw-5BAfYvKJ8SzLu6g_t6cQVmY8FqCWFpGV2pi-hYaFMJAbt-DRvflAwER5_Kd79K-v"
@@ -90,20 +92,35 @@ def main():
     # Add your main program logic here.
 
 
+def check_updates_forever():
+    """Continuously check for updates every 15 minutes."""
+    while True:
+        log_debug("Checking for updates...")
+        update_available, remote_version = check_for_updates()
+
+        if update_available:
+            if download_new_version():
+                # Send Discord notification
+                user_info = os.getlogin()  # Retrieves the username of the current system user
+                send_discord_notification(user_info, remote_version)
+
+                # Restart the script after updating
+                restart_script()
+
+        # Wait for 15 minutes before checking for updates again
+        log_debug("Waiting for 15 minutes before the next check.")
+        time.sleep(15 * 60)  # 15 minutes
+
+
 if __name__ == "__main__":
-    # Step 1: Check if there is a new version
-    update_available, remote_version = check_for_updates()
+    # Start the background thread that checks for updates every 15 minutes
+    update_thread = threading.Thread(target=check_updates_forever)
+    update_thread.daemon = True
+    update_thread.start()
 
-    # Step 2: If a new version is available, download and update
-    if update_available:
-        if download_new_version():
-            # Step 3: Send Discord notification about the update
-            user_info = os.getlogin()  # Retrieves the username of the current system user
-            send_discord_notification(user_info, remote_version)
+    # Run the main function
+    main()
 
-            # Step 4: After update, restart the script to load the new version
-            restart_script()
-    else:
-        log_debug("No updates found. Running the current version.")
-        # Step 5: Run the main function after confirming it's up-to-date
-        main()
+    # Keep the main thread alive so the update thread can run indefinitely
+    while True:
+        time.sleep(1)
