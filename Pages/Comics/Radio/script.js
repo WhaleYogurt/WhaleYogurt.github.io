@@ -25,17 +25,21 @@ document.addEventListener("DOMContentLoaded", function() {
             audioContext = new (window.AudioContext || window.webkitAudioContext)();
             analyser = audioContext.createAnalyser();
             analyser.fftSize = 2048;
+    
+            // Connect all audio sources to the analyser once
+            connectSourceToAnalyser(staticAudio);
+            connectSourceToAnalyser(channel1Audio);
+            connectSourceToAnalyser(channel2Audio);
         }
     }
     
+    
     function connectSourceToAnalyser(audioElement) {
-        if (sourceNode) {
-            sourceNode.disconnect();
-        }
-        sourceNode = audioContext.createMediaElementSource(audioElement);
+        const sourceNode = audioContext.createMediaElementSource(audioElement);
         sourceNode.connect(analyser);
         sourceNode.connect(audioContext.destination);
     }
+    
 
     function drawWaveform() {
         if (!isRadioOn) return; // Stop drawing if the radio is off
@@ -83,28 +87,14 @@ document.addEventListener("DOMContentLoaded", function() {
         const frequency = parseFloat(frequencySlider.value);
         frequencyLabel.textContent = `Frequency: ${frequency.toFixed(1)} MHz`;
         frequencyInput.value = frequency.toFixed(1);
-
-        // Reset volumes
-        staticAudio.volume = 1.0;
-        channel1Audio.volume = 0.0;
-        channel2Audio.volume = 0.0;
-
+    
         // Adjust volumes based on proximity to the channel frequency
         const channelName = adjustVolume(frequency, 90.1, channel1Audio) || adjustVolume(frequency, 95.1, channel2Audio) || "Static";
         channelNameDisplay.value = channelName;
-
-        // Connect the audio source to the analyser
-        if (channelName === "Static") {
-            connectSourceToAnalyser(staticAudio);
-        } else if (channelName === "Channel 90.1") {
-            connectSourceToAnalyser(channel1Audio);
-        } else if (channelName === "Channel 95.1") {
-            connectSourceToAnalyser(channel2Audio);
-        }
-
+    
         // Update strength indicator based on the current channel's volume
         updateStrengthIndicator(channel1Audio, channel2Audio);
-
+    
         // Start or reset the channel timer
         const newChannel = getCurrentChannel(frequency);
         if (newChannel !== currentChannel) {
@@ -116,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 channelTimer = setTimeout(logCurrentChannel, 3000); // Change to 3 seconds
             }
         }
-    }
+    }    
 
     // Function to adjust volume based on proximity
     function adjustVolume(currentFreq, targetFreq, channelAudio) {
