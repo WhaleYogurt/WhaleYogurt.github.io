@@ -108,20 +108,45 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }    
 
-    // Function to adjust volume based on proximity
     function adjustVolume(currentFreq, targetFreq, channelAudio) {
         const distance = Math.abs(currentFreq - targetFreq);
+    
         if (distance <= 0.1) {
-            staticAudio.volume = 0.0;
-            channelAudio.volume = 1.0;
+            // You're very close to the channel, so static should be 0 and channel should be 1
+            fadeVolume(staticAudio, 0.0);
+            fadeVolume(channelAudio, 1.0);
             return `Channel ${targetFreq.toFixed(1)}`;
         } else if (distance <= 0.2) {
-            staticAudio.volume = 1.0 - (5 * (distance - 0.1)); // Linear decrease within 0.1 to 0.2 range
-            channelAudio.volume = 1.0 - (5 * (distance - 0.1)); // Linear decrease within 0.1 to 0.2 range
+            // You're within a 0.1-0.2 range, so both static and channel should have partial volume
+            fadeVolume(staticAudio, 1.0 - (5 * (distance - 0.1)));  // Static increases as you move away
+            fadeVolume(channelAudio, 1.0 - (5 * (distance - 0.1))); // Channel fades out as you move away
             return `Channel ${targetFreq.toFixed(1)}`;
         }
+    
+        // If you're not within the range, channel volume should be 0
+        fadeVolume(channelAudio, 0.0);
         return null;
     }
+    
+    // Helper function to fade volume
+    function fadeVolume(audioElement, targetVolume) {
+        const step = 0.05;
+        const interval = 50;
+        const difference = targetVolume - audioElement.volume;
+        const direction = difference > 0 ? 1 : -1;
+    
+        let currentVolume = audioElement.volume;
+        const fadeInterval = setInterval(() => {
+            if ((direction > 0 && currentVolume >= targetVolume) || (direction < 0 && currentVolume <= targetVolume)) {
+                clearInterval(fadeInterval);
+                audioElement.volume = targetVolume; // Ensure exact target value
+            } else {
+                currentVolume += step * direction;
+                audioElement.volume = Math.max(0, Math.min(1, currentVolume));
+            }
+        }, interval);
+    }
+    
 
     // Function to update the strength indicator
     function updateStrengthIndicator(channel1Audio, channel2Audio) {
