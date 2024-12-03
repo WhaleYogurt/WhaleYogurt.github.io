@@ -98,6 +98,7 @@
             padding: 10px 15px;
             text-decoration: none;
             text-align: center;
+            cursor: pointer;
         }
 
         .menu-bar a:hover {
@@ -189,18 +190,18 @@
         </div>
         
         <div class="menu-bar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#archive">Archive</a>
-            <a href="#characters">Characters</a>
-            <a href="#contact">Contact</a>
-            <a href="#fun-stuff">Fun Stuff</a>
+            <a onclick="updateContent('Home')">Home</a>
+            <a onclick="updateContent('About')">About</a>
+            <a onclick="updateContent('Archive')">Archive</a>
+            <a onclick="updateContent('Characters')">Characters</a>
+            <a onclick="updateContent('Contact')">Contact</a>
+            <a onclick="updateContent('Fun Stuff')">Fun Stuff</a>
         </div>
 
         <div class="content-wrapper">
             <div class="content">
-                <div class="comic">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula aliquet purus, eu tincidunt mi ullamcorper vel.</p>
+                <div class="comic" id="dynamic-content">
+                    <p>Welcome to the home page. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula aliquet purus, eu tincidunt mi ullamcorper vel.</p>
                 </div>
             </div>
         </div>
@@ -212,6 +213,15 @@
     <script>
         function toggleTheme() {
             document.body.classList.toggle('alternate-theme');
+        }
+
+        function updateContent(buttonName) {
+            const content = document.getElementById('dynamic-content');
+            if (buttonName === 'Home') {
+                content.innerHTML = `<p>Welcome to the home page. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula aliquet purus, eu tincidunt mi ullamcorper vel.</p>`;
+            } else {
+                content.innerHTML = `<p>Placeholder: ${buttonName}</p>`;
+            }
         }
     </script>
 </body>
