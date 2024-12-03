@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galactic Goofballs</title>
@@ -133,6 +131,31 @@
             display: inline-block;
             padding: 10px;
             text-align: center;
+            animation: breaking-animation 2s infinite ease-in-out;
+        }
+        .breaking-image {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid var(--comic-border-color);
+            border-radius: 10px;
+            box-shadow: 0 0 10px var(--shadow-color);
+        }
+        @keyframes breaking-animation {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+            25% {
+                transform: rotate(15deg) scale(1.25);
+            }
+            50% {
+                transform: rotate(0deg) scale(1);
+            }
+            75% {
+                transform: rotate(-15deg) scale(1.25);
+            }
+            100% {
+                transform: rotate(0deg) scale(1);
+            }
         }
 
         /* Responsive Design */
@@ -186,7 +209,7 @@
         }
     </style>
 </head>
-<body>
+<body data-new-gr-c-s-check-loaded="14.1209.0" data-gr-ext-installed="">
     <div class="side-image left-image">
         <img src="side_image_left.png" alt="Side Image Left">
     </div>
@@ -210,9 +233,7 @@
 
         <div class="content-wrapper">
             <div class="content">
-                <div class="comic" id="dynamic-content">
-                    <p>Welcome to the home page. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula aliquet purus, eu tincidunt mi ullamcorper vel.</p>
-                </div>
+                <div class="comic" id="dynamic-content"><h1 style="font-size:2em;text-align:center;">BREAKING NEWS</h1><img src="https://whaleyogurt.github.io/Files/Images/imagejpeg_0.jpeg" alt="Breaking News Image" style="display:block; margin:0 auto; max-width:90%; height:auto;"></div>
             </div>
         </div>
     </div>
@@ -230,11 +251,12 @@
             if (buttonName === 'Home') {
                 content.innerHTML = `<p>Welcome to the home page. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula aliquet purus, eu tincidunt mi ullamcorper vel.</p>`;
             } else if (buttonName === 'Fun Stuff') {
-                content.innerHTML = `<h1 style="font-size:2em;text-align:center;">BREAKING NEWS</h1><img src="https://whaleyogurt.github.io/Files/Images/imagejpeg_0.jpeg" alt="Breaking News Image" style="display:block; margin:0 auto; max-width:90%; height:auto;">`
+                content.innerHTML = `<h1 class="breaking-news" style="font-size:2em;text-align:center;">BREAKING NEWS</h1><img src="https://whaleyogurt.github.io/Files/Images/imagejpeg_0.jpeg" class="breaking-image" alt="Breaking News Image" style="display:block; margin:0 auto; max-width:90%; height:auto;">`
             } else {
                 content.innerHTML = `<p>Placeholder: ${buttonName}</p>`;
             }
         }
     </script>
-</body>
-</html>
+
+
+</body><chatgpt-sidebar data-gpts-theme="light"></chatgpt-sidebar><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration><chatgpt-sidebar-popups data-gpts-theme="light"></chatgpt-sidebar-popups></html>
