@@ -125,6 +125,43 @@
             box-shadow: 0 0 10px var(--shadow-color);
         }
 
+        .breaking-news {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-size: 2em;
+            display: inline-block;
+            padding: 10px;
+            text-align: center;
+            animation: breaking-animation 2s infinite ease-in-out;
+        }
+
+        .breaking-image {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid var(--comic-border-color);
+            border-radius: 10px;
+            box-shadow: 0 0 10px var(--shadow-color);
+        }
+
+        @keyframes breaking-animation {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+            25% {
+                transform: rotate(15deg) scale(1.25);
+            }
+            50% {
+                transform: rotate(0deg) scale(1);
+            }
+            75% {
+                transform: rotate(-15deg) scale(1.25);
+            }
+            100% {
+                transform: rotate(0deg) scale(1);
+            }
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .side-image {
@@ -219,6 +256,11 @@
             const content = document.getElementById('dynamic-content');
             if (buttonName === 'Home') {
                 content.innerHTML = `<p>Welcome to the home page. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula aliquet purus, eu tincidunt mi ullamcorper vel.</p>`;
+            } else if (buttonName === 'Fun Stuff') {
+                content.innerHTML = `
+                    <div class="breaking-news">Breaking News</div>
+                    <img class="breaking-image" src="https://whaleyogurt.github.io/Files/Images/imagejpeg_0.jpeg" alt="Breaking News Image">
+                `;
             } else {
                 content.innerHTML = `<p>Placeholder: ${buttonName}</p>`;
             }
