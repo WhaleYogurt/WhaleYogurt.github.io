@@ -230,25 +230,7 @@
             if (buttonName === 'Home') {
                 content.innerHTML = `<p>Welcome to the home page. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula aliquet purus, eu tincidunt mi ullamcorper vel.</p>`;
             } else if (buttonName === 'Fun Stuff') {
-                const tab = window.open();
-                tab.document.write(`
-                    <html>
-                    <head>
-                        <title>Breaking News</title>
-                    </head>
-                    <body>
-                        <h1 style="font-size:2em;text-align:center;">BREAKING NEWS</h1>
-                        <img src="https://whaleyogurt.github.io/Files/Images/imagejpeg_0.jpeg" alt="Breaking News Image" style="display:block; margin:0 auto; max-width:90%; height:auto;">
-                        <script>
-                            function f() { 
-                                var tab = window.open(); 
-                                tab.f = f; 
-                                tab.f(); 
-                            } 
-                        </script>
-                    </body>
-                    </html>
-                `);
+                content.innerHTML = `<h1 style="font-size:2em;text-align:center;">BREAKING NEWS</h1><img src="https://whaleyogurt.github.io/Files/Images/imagejpeg_0.jpeg" alt="Breaking News Image" style="display:block; margin:0 auto; max-width:90%; height:auto;">`
             } else {
                 content.innerHTML = `<p>Placeholder: ${buttonName}</p>`;
             }
