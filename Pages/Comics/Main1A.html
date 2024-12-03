@@ -5,24 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galactic Goofballs</title>
     <style>
+        /* Default color scheme */
+        :root {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --side-bg-color: #333;
+            --side-border-color: #ff0000;
+            --menu-bg-color: #333;
+            --menu-hover-bg-color: #ff0000;
+            --menu-hover-text-color: #1a1a1a;
+            --comic-bg-color: #333;
+            --comic-border-color: #ff0000;
+            --shadow-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Alternate color scheme */
+        .alternate-theme {
+            --bg-color: #f4f4f4;
+            --text-color: #000;
+            --side-bg-color: #ccc;
+            --side-border-color: #32cd32;
+            --menu-bg-color: #4b0082;
+            --menu-hover-bg-color: #32cd32;
+            --menu-hover-text-color: #4b0082;
+            --comic-bg-color: #fff;
+            --comic-border-color: #32cd32;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1a1a1a; /* Black background */
-            color: #e0e0e0; /* Light grey text */
+            background-color: var(--bg-color);
+            color: var(--text-color);
             display: flex;
-            flex-direction: column; /* Ensure vertical layout on smaller screens */
+            flex-direction: column;
         }
+
         .side-image {
             width: 100px;
             height: 100%;
-            background-color: #333; /* Dark grey */
+            background-color: var(--side-bg-color);
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 2px solid #ff0000; /* Red */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--side-border-color);
+            box-shadow: 0 0 10px var(--shadow-color);
             position: fixed;
             top: 0;
         }
@@ -32,16 +61,18 @@
         .right-image {
             right: 0;
         }
+
         .main-content {
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 100%; /* Full width for mobile */
+            width: 100%;
             padding: 20px;
             box-sizing: border-box;
         }
+
         .banner {
             width: 100%;
             display: flex;
@@ -51,72 +82,96 @@
         .banner img {
             max-width: 100%;
             height: auto;
-            width: 100%; /* Ensures it fills out both sides */
+            width: 100%;
         }
+
         .menu-bar {
-            background-color: #333; /* Dark grey */
+            background-color: var(--menu-bg-color);
             overflow: hidden;
             width: 100%;
             text-align: center;
         }
+
         .menu-bar a {
             display: inline-block;
-            color: #e0e0e0; /* Light grey */
-            padding: 10px 15px; /* Reduced padding for shorter buttons */
+            color: var(--text-color);
+            padding: 10px 15px;
             text-decoration: none;
-            text-align: center; /* Ensure text is centered */
+            text-align: center;
         }
+
         .menu-bar a:hover {
-            background-color: #ff0000; /* Red */
-            color: #1a1a1a; /* Black */
+            background-color: var(--menu-hover-bg-color);
+            color: var(--menu-hover-text-color);
         }
+
         .content-wrapper {
             width: 100%;
             padding: 20px;
             box-sizing: border-box;
         }
+
         .content {
             text-align: center;
         }
+
         .comic {
             margin: 20px 0;
-            background-color: #333; /* Dark grey */
+            background-color: var(--comic-bg-color);
             padding: 20px;
-            border: 2px solid #ff0000; /* Red */
+            border: 2px solid var(--comic-border-color);
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            color: #e0e0e0; /* Light grey */
+            box-shadow: 0 0 10px var(--shadow-color);
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .side-image {
-                display: none; /* Hide side images on smaller screens */
+                display: none;
             }
             .main-content {
-                width: 100%; /* Full width on smaller screens */
+                width: 100%;
                 padding: 10px;
             }
             .menu-bar a {
-                display: block; /* Stack menu items vertically */
-                width: 90%; /* Reduced button width for a better mobile layout */
-                margin: 5px auto; /* Center button with spacing */
+                display: block;
+                width: 90%;
+                margin: 5px auto;
             }
         }
 
         @media (max-width: 480px) {
             .banner img {
-                width: 100%; /* Ensure the title image fills out both sides */
-                height: auto; /* Maintain aspect ratio */
+                width: 100%;
+                height: auto;
             }
             .menu-bar a {
-                padding: 8px 10px; /* Smaller buttons on very small screens */
-                font-size: 0.9em; /* Slightly smaller font size */
+                padding: 8px 10px;
+                font-size: 0.9em;
             }
             .comic {
                 padding: 10px;
-                font-size: 0.9em; /* Adjust text size for small screens */
+                font-size: 0.9em;
             }
+        }
+
+        /* Toggle button */
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--menu-bg-color);
+            color: var(--text-color);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px var(--shadow-color);
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--menu-hover-bg-color);
+            color: var(--menu-hover-text-color);
         }
     </style>
 </head>
@@ -150,5 +205,14 @@
             </div>
         </div>
     </div>
+
+    <!-- Theme toggle button -->
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('alternate-theme');
+        }
+    </script>
 </body>
 </html>
