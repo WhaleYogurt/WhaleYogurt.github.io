@@ -1,3 +1,262 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a613d02255479e82826b01b5ef26f3ab4fcfcd500157d3026d42ae64c72b79ab
-size 8597
+<html lang="en"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Goofballs</title>
+    <style>
+        /* Default color scheme */
+        :root {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --side-bg-color: #333;
+            --side-border-color: #ff0000;
+            --menu-bg-color: #333;
+            --menu-hover-bg-color: #ff0000;
+            --menu-hover-text-color: #1a1a1a;
+            --comic-bg-color: #333;
+            --comic-border-color: #ff0000;
+            --shadow-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Alternate color scheme */
+        .alternate-theme {
+            --bg-color: #f4f4f4;
+            --text-color: ##e0e0e0;
+            --side-bg-color: #ccc;
+            --side-border-color: #32cd32;
+            --menu-bg-color: #8a4af3;
+            --menu-hover-bg-color: #32cd32;
+            --menu-hover-text-color: #8a4af3;
+            --comic-bg-color: #fff;
+            --comic-border-color: #32cd32;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .side-image {
+            width: 100px;
+            height: 100%;
+            background-color: var(--side-bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid var(--side-border-color);
+            box-shadow: 0 0 10px var(--shadow-color);
+            position: fixed;
+            top: 0;
+        }
+        .left-image {
+            left: 0;
+        }
+        .right-image {
+            right: 0;
+        }
+
+        .main-content {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .banner {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .banner img {
+            max-width: 100%;
+            height: auto;
+            width: 100%;
+        }
+
+        .menu-bar {
+            background-color: var(--menu-bg-color);
+            overflow: hidden;
+            width: 100%;
+            text-align: center;
+        }
+
+        .menu-bar a {
+            display: inline-block;
+            color: var(--text-color);
+            padding: 10px 15px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .menu-bar a:hover {
+            background-color: var(--menu-hover-bg-color);
+            color: var(--menu-hover-text-color);
+        }
+
+        .content-wrapper {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .comic {
+            margin: 20px 0;
+            background-color: var(--comic-bg-color);
+            padding: 20px;
+            border: 5px solid var(--comic-border-color);
+            border-radius: 10px;
+            box-shadow: 0 0 10px var(--shadow-color);
+        }
+
+        .breaking-news {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-size: 2em;
+            display: inline-block;
+            padding: 10px;
+            text-align: center;
+            animation: breaking-animation 2s infinite ease-in-out;
+        }
+        .breaking-image {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid var(--comic-border-color);
+            border-radius: 10px;
+            box-shadow: 0 0 10px var(--shadow-color);
+        }
+        @keyframes breaking-animation {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+            25% {
+                transform: rotate(15deg) scale(1.25);
+            }
+            50% {
+                transform: rotate(0deg) scale(1);
+            }
+            75% {
+                transform: rotate(-15deg) scale(1.25);
+            }
+            100% {
+                transform: rotate(0deg) scale(1);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .side-image {
+                display: none;
+            }
+            .main-content {
+                width: 100%;
+                padding: 10px;
+            }
+            .menu-bar a {
+                display: block;
+                width: 90%;
+                margin: 5px auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner img {
+                width: 100%;
+                height: auto;
+            }
+            .menu-bar a {
+                padding: 8px 10px;
+                font-size: 0.9em;
+            }
+            .comic {
+                padding: 10px;
+                font-size: 0.9em;
+            }
+        }
+
+        /* Toggle button */
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--menu-bg-color);
+            color: var(--text-color);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px var(--shadow-color);
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--menu-hover-bg-color);
+            color: var(--menu-hover-text-color);
+        }
+    </style>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1209.0" data-gr-ext-installed="">
+    <div class="side-image left-image">
+        <img src="side_image_left.png" alt="Side Image Left">
+    </div>
+    <div class="side-image right-image">
+        <img src="side_image_right.png" alt="Side Image Right">
+    </div>
+
+    <div class="main-content">
+        <div class="banner">
+            <img src="title_image.png" alt="Galactic Goofballs">
+        </div>
+        
+        <div class="menu-bar">
+            <a onclick="updateContent('Home')">Home</a>
+            <a onclick="updateContent('About')">About</a>
+            <a onclick="updateContent('Archive')">Archive</a>
+            <a onclick="updateContent('Characters')">Characters</a>
+            <a onclick="updateContent('Contact')">Contact</a>
+            <a onclick="updateContent('Fun Stuff')">Fun Stuff</a>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="content">
+                <div class="comic" id="dynamic-content">
+                    <p>Welcome to the home page. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula aliquet purus, eu tincidunt mi ullamcorper vel.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme toggle button -->
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('alternate-theme');
+        }
+
+        function updateContent(buttonName) {
+            const content = document.getElementById('dynamic-content');
+            if (buttonName === 'Home') {
+                content.innerHTML = `<p>Welcome to the home page. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula aliquet purus, eu tincidunt mi ullamcorper vel.</p>`;
+            } else if (buttonName === 'Fun Stuff') {
+                content.innerHTML = `<h1 class="breaking-news" style="font-size:2em;text-align:center;">BREAKING NEWS</h1><img src="https://whaleyogurt.github.io/Files/Images/imagejpeg_0.jpeg" class="breaking-image" alt="Breaking News Image" style="display:block; margin:0 auto; max-width:90%; height:auto;">`
+            } else {
+                content.innerHTML = `<p>Placeholder: ${buttonName}</p>`;
+            }
+        }
+    </script>
+
+
+</body><chatgpt-sidebar data-gpts-theme="light"></chatgpt-sidebar><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration><chatgpt-sidebar-popups data-gpts-theme="light"></chatgpt-sidebar-popups></html>
